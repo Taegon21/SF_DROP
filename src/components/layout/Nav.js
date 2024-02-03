@@ -14,6 +14,9 @@ function Nav() {
       <Link to="/mypage" className={styles.link}>
         My Page
       </Link>
+      <Link to="/usersign" className={styles.link}>
+        User Sign
+      </Link>
     </nav>
   );
 }

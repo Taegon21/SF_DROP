@@ -18,7 +18,6 @@ function Filedrop() {
     event.preventDefault();
     setSelectedFiles(Array.from(event.dataTransfer.files));
   };
-
   // 파일 삭제 핸들러
   const deleteFile = (index) => {
     const newFiles = selectedFiles.filter((_, i) => i !== index);

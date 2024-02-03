@@ -3,6 +3,7 @@ import App from "./components/App";
 import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Mypage from "./pages/Mypage";
+import UserSign from "./pages/UserSign";
 
 function Main() {
   return (
@@ -11,6 +12,9 @@ function Main() {
         <Route path="/" element={<App />}>
           <Route path="home">
             <Route index element={<Home />}></Route>
+          </Route>
+          <Route path="usersign">
+            <Route index element={<UserSign />}></Route>
           </Route>
           <Route path="upload">
             <Route index element={<Upload />}></Route>
