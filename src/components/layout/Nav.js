@@ -17,6 +17,9 @@ function Nav() {
       <Link to="/usersign" className={styles.link}>
         User Sign
       </Link>
+      <Link to="/print" className={styles.link}>
+        Print
+      </Link>
     </nav>
   );
 }

@@ -1,7 +1,7 @@
 .fileDropContainer {
-  display: flex; /* Flex 컨테이너 설정 */
-  justify-content: space-between; /* 요소들 사이에 공간을 균등하게 배분 */
-  align-items: flex-start; /* 요소들을 컨테이너의 시작 부분에 정렬 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .uploadContainer {
@@ -9,9 +9,10 @@
   border: 2px dashed #999;
   text-align: center;
   margin: 20px;
-  flex-basis: 50%; /* flex 컨테이너 안에서 기본 너비를 설정 */
+  flex-basis: 50%;
 }
 
 .fileInput {
   margin-bottom: 20px;
 }
+

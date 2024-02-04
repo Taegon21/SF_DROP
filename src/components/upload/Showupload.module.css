@@ -1,0 +1,40 @@
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.authCode {
+  margin: 10px 0;
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.fileList {
+  list-style: none;
+  padding: 0;
+}
+
+.fileItem {
+  margin: 5px 0;
+  color: #555;
+}
+
+.homeButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

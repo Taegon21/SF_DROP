@@ -1,7 +1,7 @@
-// Filedrop.js
 import React, { useState } from "react";
 import styles from "./Filedrop.module.css";
 import FileList from "./FileList";
+import UploadButton from "./UploadButton"; // UploadButton 컴포넌트를 임포트합니다.
 
 function Filedrop() {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -18,6 +18,7 @@ function Filedrop() {
     event.preventDefault();
     setSelectedFiles(Array.from(event.dataTransfer.files));
   };
+
   // 파일 삭제 핸들러
   const deleteFile = (index) => {
     const newFiles = selectedFiles.filter((_, i) => i !== index);
@@ -25,23 +26,30 @@ function Filedrop() {
   };
 
   return (
-    <div className={styles.fileDropContainer}>
-      <div
-        onDragOver={onDragOver}
-        onDrop={onDrop}
-        className={styles.uploadContainer}
-      >
-        <h1>Upload</h1>
-        <input
-          type="file"
-          onChange={fileChangedHandler}
-          className={styles.fileInput}
-          multiple
-        />
-        <p>Drag files here or click to select files</p>
+    <>
+      <div className={styles.fileDropContainer}>
+        <div
+          onDragOver={onDragOver}
+          onDrop={onDrop}
+          className={styles.uploadContainer}
+        >
+          <h1>Upload</h1>
+          <input
+            type="file"
+            onChange={fileChangedHandler}
+            className={styles.fileInput}
+            multiple
+          />
+          <p>Drag files here or click to select files</p>
+        </div>
+        <FileList files={selectedFiles} onDelete={deleteFile} />
       </div>
-      <FileList files={selectedFiles} onDelete={deleteFile} />
-    </div>
+      {/* UploadButton 컴포넌트를 fileDropContainer 바깥으로 이동하고 스타일링을 추가합니다. */}
+      <UploadButton
+        selectedFiles={selectedFiles}
+        setSelectedFiles={setSelectedFiles}
+      />
+    </>
   );
 }
 
