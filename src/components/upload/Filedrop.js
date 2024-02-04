@@ -44,7 +44,6 @@ function Filedrop() {
         </div>
         <FileList files={selectedFiles} onDelete={deleteFile} />
       </div>
-      {/* UploadButton 컴포넌트를 fileDropContainer 바깥으로 이동하고 스타일링을 추가합니다. */}
       <UploadButton
         selectedFiles={selectedFiles}
         setSelectedFiles={setSelectedFiles}

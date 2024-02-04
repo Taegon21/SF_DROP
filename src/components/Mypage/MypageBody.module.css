@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  margin: 0px 100px;
+}
+
+.leftbody {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 200px;
+  text-align: left;
+}
+
+.rightbody {
+  flex: 3;
+  margin: 0px 0px 0px 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 100%;
+  text-align: left;
+}

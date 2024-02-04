@@ -1,0 +1,98 @@
+.uploadContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.bundle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 8px;
+  margin: 0 30px;
+}
+
+.lastBundle {
+  border-bottom: none; /* 마지막 요소에는 밑줄을 제거 */
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  width: 100%; /* 파일 목록 부분이 차지할 전체 컨테이너의 비율 */
+}
+
+.fileList {
+  display: flex;
+  
+  white-space: nowrap; /* 파일 이름이 줄 바뀜 없이 한 줄로 나열되게 함 */
+  width: 40%; /* 파일 목록이 차지할 최대 비율 */
+  overflow-x: auto; /* 스크롤바 항상 표시 */
+  -ms-overflow-style: scrollbar; /* IE 및 Edge를 위한 설정 */
+
+}
+/* Webkit 브라우저용 스크롤바 항상 표시 */
+.fileList::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 2px;
+  height: 8px;
+}
+
+.fileList::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3); /* 스크롤바 썸의 색상 */
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.3); /* 스크롤바 썸에 그림자 효과 */
+}
+.fileList::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #e5e5e5;
+}
+
+
+.fileName {
+  display: inline-block; /* 파일 이름을 inline 요소로 만들어 가로로 나열 */
+  margin-right: 8px; /* 파일 이름과 시간 사이의 간격 */
+  
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* 왼쪽정렬 */ 
+  margin-left: auto; /* 파일 목록과 상세정보 사이의 간격 */
+  width: 215px;
+  
+}
+
+.authCode {
+  font-weight: bold;
+  
+}
+
+.time{
+  margin-right: 10px;
+  color: #6d6d6d;
+  
+}
+
+.deleteButton {
+  padding: 5px 16px;
+  font-size: 14px;
+  color: white;
+  background-color: #6d6d6d;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* 그림자 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.deleteButton:hover {
+  background-color: #f10707;
+  /* 시간차 적용 */
+  transition: background-color 0.3s;
+}
+

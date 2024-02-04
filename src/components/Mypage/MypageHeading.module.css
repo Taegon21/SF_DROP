@@ -1,0 +1,18 @@
+.heading {
+  /* 중앙정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 0px;
+
+}
+
+
+.underline {
+  /* 밑줄 */
+  border-bottom: 2px solid black;
+  padding: 5px;
+  margin: 0 100px 50px;
+  color: #007BFF;
+
+}

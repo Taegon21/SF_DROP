@@ -1,21 +1,27 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Filefetch.module.css";
+import Validtime from "../../utils/Validtime";
 
 const Filefetch = () => {
+  const [tempAuthCode, setTempAuthCode] = useState("");
   const [authCode, setAuthCode] = useState("");
   const [files, setFiles] = useState([]);
   const [error, setError] = useState("");
-  const [previewFile, setPreviewFile] = useState(null); // 추가: 미리보기 파일 상태
+  const [previewFile, setPreviewFile] = useState(null);
 
-  const fetchFiles = async () => {
+  // 파일 가져오기 함수 수정
+  const fetchFiles = async (currentAuthCode) => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/files?authCode=${authCode}`
+        `http://localhost:8000/files?authCode=${currentAuthCode}`
       );
-      setFiles(response.data.files || []);
+      const filteredFiles = response.data.files.filter(
+        (file) => !file.endsWith(".json")
+      );
+      setFiles(filteredFiles || []);
       setError("");
-      setPreviewFile(null); // 파일 목록을 새로 불러올 때 미리보기 초기화
+      setPreviewFile(null);
     } catch (err) {
       setError(
         "Failed to fetch files. Please make sure the auth code is correct."
@@ -23,6 +29,11 @@ const Filefetch = () => {
       setFiles([]);
       setPreviewFile(null);
     }
+  };
+
+  const handleFetchClick = () => {
+    setAuthCode(tempAuthCode); // 상태 업데이트
+    fetchFiles(tempAuthCode); // 인자를 전달하여 파일 가져오기 함수 호출
   };
 
   const isImageFile = (filename) => {
@@ -37,18 +48,18 @@ const Filefetch = () => {
     <div className={styles.container}>
       <input
         type="text"
-        value={authCode}
-        onChange={(e) => setAuthCode(e.target.value)}
+        value={tempAuthCode}
+        onChange={(e) => setTempAuthCode(e.target.value)}
         placeholder="Enter Auth Code"
       />
-      <button onClick={fetchFiles}>Fetch Files</button>
+      <button onClick={handleFetchClick}>Fetch Files</button>
       {error && <p className={styles.error}>{error}</p>}
       <div>
         {files.map((file, index) => (
           <div key={index} className={styles.fileItem}>
             <span>{file}</span>
             <button onClick={() => handlePreview(file)}>Preview</button>
-            {previewFile === file && // 미리보기 버튼 클릭 시 해당 파일만 미리보기로 보이게 함
+            {previewFile === file &&
               (isImageFile(file) ? (
                 <img
                   src={`http://localhost:8000/files/${authCode}/${file}`}
@@ -66,6 +77,7 @@ const Filefetch = () => {
               ))}
           </div>
         ))}
+        <Validtime authCode={authCode} />
       </div>
     </div>
   );

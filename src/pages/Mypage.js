@@ -1,8 +1,13 @@
+import MypageHeading from "../components/Mypage/MypageHeading"
+import MypageBody from "../components/Mypage/MypageBody"
+
+
 function Mypage() {
   return (
     <div>
-      <h1>My Page</h1>
-      <p>This is my page.</p>
+      <MypageHeading />
+      <MypageBody />
+      
     </div>
   );
 }

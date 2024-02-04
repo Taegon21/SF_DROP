@@ -1,0 +1,11 @@
+.container {
+  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 100%;
+
+}
+
+.h3 {
+  margin: 20px 0px 0px 20px;
+}

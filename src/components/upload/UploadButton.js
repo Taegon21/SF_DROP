@@ -17,12 +17,14 @@ const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
 
     // FormData에 인증번호 추가
     formData.append("authCode", authCode);
+    // const accessToken = localStorage.getItem("accessToken"); 
 
     try {
       await axios.post("http://localhost:8000/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
+        withCredentials: true, // 쿠키 전송을 위해 withCredentials 설정
       });
       setSelectedFiles([]); // 파일 목록 초기화
       // 업로드 성공 후, /uploadcomplete로 이동하며 state로 데이터 전달

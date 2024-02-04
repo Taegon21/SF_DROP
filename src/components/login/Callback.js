@@ -30,7 +30,9 @@ const Callback = () => {
 
           // 액세스 토큰과 리프레시 토큰을 로컬 스토리지에 저장
           localStorage.setItem("accessToken", response.data.access_token);
-          localStorage.setItem("refreshToken", response.data.refresh_token);
+          localStorage.setItem("ID", response.data.user_id);
+          localStorage.setItem("nickname", response.data.nickname);
+          
 
           navigate("/"); // 인가 코드 전송 후 메인 페이지로 이동
         } catch (err) {
