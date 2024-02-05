@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // 리액트 라우터의 useNavigate 훅 임포트
+import styles from "./UploadButton.module.css";
 
 const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
   const navigate = useNavigate(); // navigate 함수 사용
@@ -36,7 +37,11 @@ const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
     }
   };
 
-  return <button onClick={uploadFiles}>Upload Files</button>;
+  return (
+    <button className={styles.button} onClick={uploadFiles}>
+      Upload Files
+    </button>
+  );
 };
 
 export default UploadButton;

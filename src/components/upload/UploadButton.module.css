@@ -1,0 +1,21 @@
+/* UploadButton.module.css */
+.button {
+  background-color: #585858; /* 녹색 배경 */
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #45a049; /* 호버 시 더 짙은 녹색으로 변경 */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+}

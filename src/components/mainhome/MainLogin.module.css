@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+
+.leftbody {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #000000;
+}
+
+.rightbody {
+  flex: 1;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}

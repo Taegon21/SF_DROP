@@ -4,14 +4,17 @@ import Home from "./pages/Home";
 import Upload from "./pages/Upload";
 import Mypage from "./pages/Mypage";
 import UserSign from "./pages/UserSign";
+import Mainpage from "./pages/Mainpage";
 import Uploadcomplete from "./pages/Uploadcomplete";
 import Print from "./pages/Print";
 import Callback from "./components/login/Callback";
+
 
 function Main() {
   return (
    <BrowserRouter>
       <Routes>
+        <Route path="Mainpage" element={<Mainpage />}></Route>
         <Route path="/" element={<App />}>
           <Route path="home">
             <Route index element={<Home />}></Route>

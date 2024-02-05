@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  margin: 0px 100px;
+  height: 600px;
+}
+
+.leftbody {
+  flex: 1;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
+}
+
+.uploadcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  /* border: 2px dashed #999; */
+  height: 80%;
+  width: 80%;
+}
+
+.fileicon {
+  margin: 0px 0px 20px 0px;
+}
+.fileicon:hover {
+  cursor: pointer;
+  filter: opacity(60%); 
+  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+}
+.text {
+  font-size: 15px;
+  text-align: center;
+}
+
+.rightbody {
+  flex: 1;
+  margin: 0px 0px 0px 20px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  text-align: left;
+  height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
+}
+
+.uploadButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
