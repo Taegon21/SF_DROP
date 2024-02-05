@@ -1,12 +1,70 @@
+.all {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+}
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px auto 30px;
+  margin: 100px auto 100px;
+  padding-bottom: 50px;
   border: 2px dashed #ddd;
   border-radius: 8px;
   width: 60%;
   text-align: center;
-  height: 600px;
 }
 
+.logo {
+  margin: 20px 0 0;
+  width: 400px;
+}
+
+.filecontainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.fileItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ddd;
+}
+
+.fileItem:last-child {
+  border-bottom: none; /* 마지막 항목 밑줄 제거 */
+}
+
+.fileandicon {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.onefileicon {
+  margin-right: 20px;
+}
+
+.button {
+  background-color: #585858; /* 녹색 배경 */
+  border: none;
+  color: white;
+  padding: 7px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  width: 150px;
+  margin: 5px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #45a049; /* 호버 시 더 짙은 녹색으로 변경 */
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+}

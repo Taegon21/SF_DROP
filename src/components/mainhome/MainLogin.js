@@ -6,12 +6,16 @@ function MainLogin() {
   return (
     <div className={styles.container}>
       <div className={styles.leftbody}>
-        <img className={styles.logo} src={sfdrop_green} alt="sfdrop_green" />
+        <div className={styles.avatar}>
+          <img className={styles.logo} src={sfdrop_green} alt="sfdrop_green" />
+        </div>
       </div>
       <div className={styles.rightbody}>
-        <h1>SF DROP</h1>
-        <h2>Safe & Fast</h2>
-        <h2>세상에서 가장 빠르고 안전하게 파일을 인쇄해보세요!</h2>
+        <h1 className={styles.title}>SF DROP</h1>
+        <h2 className={styles.subtitle}>Safe & Fast</h2>
+        <h2 className={styles.subtitle}>
+          세상에서 가장 빠르고 안전하게 파일을 인쇄해보세요!
+        </h2>
         <p className={styles.st}>지금 바로 시작하기</p>
         <KakaoLoginButton />
       </div>

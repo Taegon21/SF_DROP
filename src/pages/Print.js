@@ -7,7 +7,7 @@ function Print() {
   return (
     <RecoilRoot>
       <div>
-        <h1 style={{ textAlign: "center" }}>여기는 프린트하는 공용pc입니다</h1>
+        <h3 style={{ textAlign: "center" }}>여기는 프린트하는 공용pc입니다</h3>
         <Outlet />
       </div>
     </RecoilRoot>

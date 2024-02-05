@@ -3,21 +3,20 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-
 }
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 
 .container {
   display: flex;
   width: 100vw; /* 뷰포트의 전체 너비 */
   height: 100vh; /* 뷰포트의 전체 높이 */
   /* 상하좌우 가운데 정렬 */
-  
-}
-
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  overflow: hidden; /* 스크롤바 숨김 */
 }
 
 .leftbody {
@@ -32,19 +31,67 @@ h1 {
 
 .logo {
   width: 500px;
+  /* 그림자 추가 */
+  filter: drop-shadow(5px 5px 5px #014420);  
+}
+
+@keyframes float {
+	0% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+    filter: drop-shadow(0 10px 30px 0px #014420);  
+		transform: translatey(0px);
+	}
+	50% {
+		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+		transform: translatey(-40px);
+    filter: drop-shadow(0 50px 30px 0px #014420);  
+	}
+	100% {
+		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+		transform: translatey(0px);
+    filter: drop-shadow(0 10px 30px 0px #014420); 
+	}
+}
+
+.avatar {
+	width: 500px;
+	height: 500px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px #014420;
+	transform: translatey(0px);
+	animation: float 5s ease-in-out infinite;
+	img { width: 100%; height: auto; }
 }
 
 
 .rightbody {
-  background-color: #1E6838;
+  background-color: #1E6838; /* 짙은 녹색 배경 */
   flex: 1;
   display: flex;
-
   flex-direction: column;
-  justify-content: center; /* 가로 중앙 정렬 */
-  align-items: center; /* 세로 중앙 정렬 */
-  height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
-  color: rgb(242, 255, 242);
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  height: 100%; /* 부모 컨테이너 높이에 맞춤 */
+  color: #F2FFF2; /* 부드러운 녹색 텍스트 */
+  min-height: 100vh; /* 최소 높이를 뷰포트 높이의 100%로 설정 */
+  min-width: 50vw; /* 최소 너비를 뷰포트 너비의 50%로 설정 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 텍스트에 그림자 추가 */
+}
+
+.title {
+  font-size: 4rem; /* 큰 타이틀 크기 */
+  padding-bottom: 20px; /* 타이틀 아래 여백 */
+  animation: fadeIn 4s ease-in-out;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; /* 애니메이션 한 번만 실행 */
+}
+
+.subtitle {
+  font-size: 1.5rem; /* 부제목 크기 */
+  margin: 0.5rem 0; /* 부제목 간격 */
+  opacity: 0.8; /* 부제목 투명도 */
 }
 
 .st {
@@ -53,3 +100,17 @@ h1 {
   font-size: 30px;
   font-weight: bold;
 }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+

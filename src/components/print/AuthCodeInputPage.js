@@ -10,12 +10,11 @@ const AuthCodeInputPage = () => {
   const [tempAuthCode, setTempAuthCode] = useState("");
   const setAuthCode = useSetRecoilState(authCodeState);
   const navigate = useNavigate();
-  const [error, setError] = useState(""); // 에러 메시지 상태
 
   const handleFetchClick = async () => {
     // 입력된 인증번호가 비어있는 경우 에러 메시지 설정
     if (!tempAuthCode.trim()) {
-      setError("Please enter an auth code.");
+      window.alert("인증번호를 입력해주세요."); // 에러 메시지 대신 alert 사용
       return; // 함수 실행을 여기서 중단
     }
 
@@ -26,8 +25,7 @@ const AuthCodeInputPage = () => {
       setAuthCode(tempAuthCode);
       navigate("/print/filefetch");
     } catch (error) {
-      // 잘못된 인증번호 입력 시 에러 처리
-      setError("Invalid Auth Code. Please try again.");
+      window.alert("잘못된 인증번호입니다. 다시 시도해주세요."); // 잘못된 인증번호 입력 시 에러 처리를 alert로 변경
     }
   };
 
@@ -44,7 +42,6 @@ const AuthCodeInputPage = () => {
       <button className={styles.button} onClick={handleFetchClick}>
         파일 불러오기
       </button>
-      {error && <p>{error}</p>} {/* 에러 메시지 출력 */}
     </div>
   );
 };

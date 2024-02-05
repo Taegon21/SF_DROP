@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { authCodeState } from "../../atoms";
 import axios from "axios";
-import styles from "./FileFetchPage.module.css"; // CSS 파일 경로는 실제 구조에 맞게 조정하세요
+import styles from "./FileFetchPage.module.css";
+import sfdrop_green from "../../assets/sfdrop_green.png";
+import onefileicon from "../../assets/onefileicon.png";
 
 const FileFetchPage = () => {
   const authCode = useRecoilValue(authCodeState);
@@ -41,38 +43,51 @@ const FileFetchPage = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className={styles.container}>
-      {files.length > 0 ? (
-        files.map((file, index) => (
-          <div key={index} className={styles.fileItem}>
-            <span className={styles.fileName}>{file}</span>
-            {isPdfFile(file) ? (
-              <button
-                className={styles.previewButton}
-                onClick={() =>
-                  window.open(
-                    `http://localhost:8000/files/${authCode}/${file}`,
-                    "_blank"
-                  )
-                }
-              >
-                미리보기
-              </button>
-            ) : (
-              <button
-                className={styles.downloadButton}
-                onClick={() =>
-                  (window.location.href = `http://localhost:8000/files/${authCode}/${file}`)
-                }
-              >
-                다운로드
-              </button>
-            )}
-          </div>
-        ))
-      ) : (
-        <div>No files found.</div>
-      )}
+    <div className={styles.all}>
+      <div className={styles.container}>
+        <img src={sfdrop_green} alt="sfdrop_green" className={styles.logo} />
+        <div className={styles.filecontainer}>
+          {files.length > 0 ? (
+            files.map((file, index) => (
+              <div key={index} className={styles.fileItem}>
+                <div className={styles.fileandicon}>
+                  <img
+                    src={onefileicon}
+                    alt="onefileicon"
+                    className={styles.onefileicon}
+                  />
+                  <span className={styles.fileName}>{file}</span>
+                </div>
+                {isPdfFile(file) ? (
+                  <button
+                    className={styles.button}
+                    onClick={() =>
+                      window.open(
+                        `http://localhost:8000/files/${authCode}/${file}`,
+                        "_blank"
+                      )
+                    }
+                  >
+                    미리보기
+                  </button>
+                ) : (
+                  <button
+                    className={styles.button}
+                    onClick={() =>
+                      (window.location.href = `http://localhost:8000/files/${authCode}/${file}`)
+                    }
+                  >
+                    다운로드
+                  </button>
+                )}
+              </div>
+            ))
+          ) : (
+            <div>No files found.</div>
+          )}
+        </div>
+        {/* <button className={styles.button}>전체 인쇄</button> */}
+      </div>
     </div>
   );
 };

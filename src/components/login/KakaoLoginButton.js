@@ -20,7 +20,11 @@ const KakaoLoginButton = () => {
       onClick={handleLogin}
       style={{ border: "none", background: "transparent", outline: "none" }}
     >
-      <img className={styles.loginbutton} src={kakaobutton} alt="Kakao Login" />
+      <img
+        className={styles.kakaoLoginButton}
+        src={kakaobutton}
+        alt="Kakao Login"
+      />
     </button>
   );
 };
