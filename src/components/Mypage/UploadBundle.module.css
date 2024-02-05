@@ -37,7 +37,7 @@
 .fileList {
   display: flex;
   white-space: nowrap; /* 파일 이름이 줄 바뀜 없이 한 줄로 나열되게 함 */
-  width: 300px; /* 파일 목록 부분이 차지할 전체 컨테이너의 비율 */
+  width: 400px; /* 파일 목록 부분이 차지할 전체 컨테이너의 비율 */
   overflow-x: auto; /* 스크롤바 항상 표시 */
   -ms-overflow-style: scrollbar; /* IE 및 Edge를 위한 설정 */
 }

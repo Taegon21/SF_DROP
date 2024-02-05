@@ -1,23 +1,25 @@
 .container {
   display: flex;
   margin: 0px 100px;
+  padding: 0 0 100px;
 }
 
 .leftbody {
+  position: sticky;
+  top: 50px; /* 뷰포트 상단에 닿았을 때 sticky 효과 발생 */
   flex: 1;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
   max-width: 200px;
   text-align: left;
+  max-height: 550px;
 }
 
 .rightbody {
   flex: 3;
   margin: 0px 0px 0px 20px;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 0 0 0 20px;
   border-radius: 8px;
-  
   text-align: left;
 }

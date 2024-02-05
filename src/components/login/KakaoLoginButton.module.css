@@ -1,0 +1,11 @@
+.loginbutton {
+  width: 300px;
+  border: none; /* 테두리 제거 */
+  background: transparent; /* 배경 투명 */
+  outline: none; /* 클릭 시 나타나는 아웃라인 제거 */
+}
+
+
+.loginbutton:hover {
+  cursor: pointer; /* 마우스 오버 시 포인터 모양으로 변경 */
+}

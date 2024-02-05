@@ -46,7 +46,25 @@
   border-radius: 8px;
   text-align: left;
   height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
+  overflow-y: auto;
+  max-height: 100%;
 }
+
+.rightbody::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.rightbody::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3); /* 스크롤바 썸의 색상 */
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.3); 
+}
+.rightbody::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #e5e5e5;
+}  
+
 
 .uploadButtonContainer {
   display: flex;

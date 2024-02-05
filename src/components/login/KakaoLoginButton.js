@@ -1,5 +1,6 @@
-
 import React from "react";
+import kakaobutton from "../../assets/kakaobutton.png";
+import styles from "./KakaoLoginButton.module.css";
 
 const KakaoLoginButton = () => {
   React.useEffect(() => {
@@ -14,7 +15,14 @@ const KakaoLoginButton = () => {
     });
   };
 
-  return <button onClick={handleLogin}>카카오로 로그인하기</button>;
+  return (
+    <button
+      onClick={handleLogin}
+      style={{ border: "none", background: "transparent", outline: "none" }}
+    >
+      <img className={styles.loginbutton} src={kakaobutton} alt="Kakao Login" />
+    </button>
+  );
 };
 
 export default KakaoLoginButton;

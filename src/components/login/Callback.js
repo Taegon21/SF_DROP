@@ -12,7 +12,7 @@ const Callback = () => {
         try {
           // FormData 객체 생성
           const formData = new URLSearchParams();
-          formData.append('code', code);
+          formData.append("code", code);
           console.log("formData:", formData.toString()); // FormData 객체 로그 출력
 
           // 서버로 인가 코드 전송 및 응답 받기
@@ -32,9 +32,8 @@ const Callback = () => {
           localStorage.setItem("accessToken", response.data.access_token);
           localStorage.setItem("ID", response.data.user_id);
           localStorage.setItem("nickname", response.data.nickname);
-          
 
-          navigate("/"); // 인가 코드 전송 후 메인 페이지로 이동
+          navigate("/upload"); // 인가 코드 전송 후 메인 페이지로 이동
         } catch (err) {
           console.error("서버 인증 오류:", err);
           // 오류 처리 로직

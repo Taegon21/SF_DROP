@@ -18,7 +18,7 @@ function Nav() {
         User Sign
       </Link>
       <Link to="/print" className={styles.link}>
-        Print
+        PrintCafe
       </Link>
     </nav>
   );
