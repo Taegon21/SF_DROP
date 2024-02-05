@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./UploadBundle.module.css";
-import Validtime from "../../utils/Validtime"; 
-import {handleDelete} from "./HandleDelete"
+import Validtime from "../../utils/Validtime";
+import { handleDelete } from "../../utils/HandleDelete";
+import fileicon from "../../assets/fileicon.png";
 
 const UploadBundle = () => {
   const [groupedFiles, setGroupedFiles] = useState([]);
@@ -30,6 +31,7 @@ const UploadBundle = () => {
             index === array.length - 1 ? styles.lastBundle : ""
           }`}
         >
+          <img src={fileicon} alt="Files Icon" className={styles.fileicon} />
           <div className={styles.fileInfo}>
             <div className={styles.fileList}>
               {files.map((file, fileIndex) => (

@@ -1,14 +1,14 @@
+
 .uploadContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .bundle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 8px;
   margin: 0 30px;
@@ -18,21 +18,31 @@
   border-bottom: none; /* 마지막 요소에는 밑줄을 제거 */
 }
 
+.fileicon {
+  width: 50px;
+  height: 50px;
+  margin-right: 40px;
+}
+
+
 .fileInfo {
   display: flex;
   align-items: center;
   width: 100%; /* 파일 목록 부분이 차지할 전체 컨테이너의 비율 */
+  /* 왼쪽에 배치 */
+  
 }
+
 
 .fileList {
   display: flex;
-  
   white-space: nowrap; /* 파일 이름이 줄 바뀜 없이 한 줄로 나열되게 함 */
-  width: 40%; /* 파일 목록이 차지할 최대 비율 */
+  width: 300px; /* 파일 목록 부분이 차지할 전체 컨테이너의 비율 */
   overflow-x: auto; /* 스크롤바 항상 표시 */
   -ms-overflow-style: scrollbar; /* IE 및 Edge를 위한 설정 */
-
 }
+
+
 /* Webkit 브라우저용 스크롤바 항상 표시 */
 .fileList::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -62,20 +72,17 @@
   flex-direction: column;
   align-items: flex-start;
   /* 왼쪽정렬 */ 
-  margin-left: auto; /* 파일 목록과 상세정보 사이의 간격 */
+  margin-left: auto;
   width: 215px;
   
 }
 
 .authCode {
   font-weight: bold;
-  
 }
 
 .time{
-  margin-right: 10px;
   color: #6d6d6d;
-  
 }
 
 .deleteButton {
