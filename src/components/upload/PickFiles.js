@@ -50,9 +50,7 @@ function PickFiles() {
                 className={styles.fileicon}
               />
             </label>
-            <p className={styles.text}>
-              Click Icon or Drag files to Upload
-            </p>
+            <p className={styles.text}>Click Icon or Drag files to Upload</p>
           </div>
         </div>
         <div className={styles.rightbody}>

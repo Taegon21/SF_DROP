@@ -19,7 +19,7 @@ function CalTotalSize() {
   }, []);
 
   // const maxSize = 1 * 1024 * 1024 * 1024; // 1GB in bytes
-  const maxSize = 100 * 1024 * 1024; // 100MB in bytes
+  const maxSize = 200 * 1024 * 1024; // 100MB in bytes
   const sizeInMB = (totalSize / (1024 * 1024)).toFixed(2);
   const usedPercentage = ((totalSize / maxSize) * 100).toFixed(2);
   const progressBarClass =
@@ -31,7 +31,7 @@ function CalTotalSize() {
     <div className={styles.container}>
       <div className={styles.totalSizeInfo}>
         <p className={styles.text}>
-          총 100MB 중 {sizeInMB} MB({usedPercentage}%) 사용{" "}
+          총 200MB 중 {sizeInMB} MB({usedPercentage}%) 사용{" "}
         </p>
       </div>
       <div className={styles.progressBarContainer}>

@@ -7,7 +7,6 @@ function Mypage() {
     <div>
       <MypageHeading />
       <MypageBody />
-      
     </div>
   );
 }

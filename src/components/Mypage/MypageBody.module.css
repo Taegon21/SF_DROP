@@ -6,7 +6,7 @@
 
 .leftbody {
   position: sticky;
-  top: 50px; /* 뷰포트 상단에 닿았을 때 sticky 효과 발생 */
+  top: 150px; /* 뷰포트 상단에 닿았을 때 sticky 효과 발생 */
   flex: 1;
   padding: 20px;
   border: 1px solid #ddd;

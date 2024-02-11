@@ -30,7 +30,9 @@
   font-weight: bold; /* 글씨 굵기 */
 }
 
+
 .link:hover {
-  color: #45a049; /* 호버 시 더 짙은 녹색으로 변경 */
+  color: green; /* 호버 시 더 짙은 녹색으로 변경 */
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+
 }

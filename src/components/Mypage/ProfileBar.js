@@ -23,7 +23,7 @@ function ProfileBar() {
       <div className={styles.underline}></div>
       <div className={styles.profileinfo}>
         <Link to="/mypage" className={styles.link}>
-          <p>내 정보</p>
+          <p className={styles.myname}>내 정보</p>
         </Link>
         <Link to="/mypage" className={styles.link}>
           <p>문의 사항</p>
