@@ -1,6 +1,6 @@
 ## 프로젝트명:
 
-SF Drop
+SF Drop (Safe & Fast Drop Solution)
 
 ## 프로젝트 개요:
 - 한줄 소개: 무인 프린트 카페를 위한 빠르고 안전한 인증번호 기반 파일 전송 솔루션 서비스
