@@ -6,7 +6,7 @@ import sfdrop_green from "../../assets/sfdrop_green.png";
 
 function ShowUpload() {
   const location = useLocation();
-  const navigate = useNavigate(); // navigate 함수 사용
+  const navigate = useNavigate(); 
   const { files, authCode } = location.state || { files: [], authCode: "" };
 
   return (

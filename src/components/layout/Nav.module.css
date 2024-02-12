@@ -1,16 +1,16 @@
 .nav {
   display: flex;
-  justify-content: space-around; /* 링크들을 균등하게 배치 */
-  padding: 1rem; /* 상단과 양옆의 여백 */
-  background-color: #f0f0f0; /* 배경색 */
+  justify-content: space-around; 
+  padding: 1rem; 
+  background-color: #f0f0f0; 
 }
 
 .link {
-  text-decoration: none; /* 링크 밑줄 제거 */
-  color: #333; /* 링크 색상 */
-  font-weight: bold; /* 글씨 굵기 */
+  text-decoration: none; 
+  color: #333; 
+  font-weight: bold; 
 }
 
 .link:hover {
-  color: #007bff; /* 호버 시 색상 변경 */
+  color: #007bff; 
 }

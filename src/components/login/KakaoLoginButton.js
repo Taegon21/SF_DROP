@@ -11,7 +11,6 @@ const KakaoLoginButton = () => {
   const handleLogin = () => {
     window.Kakao.Auth.authorize({
       redirectUri: "http://localhost:3000/callback",
-      // 추가적인 설정이 필요할 수 있습니다.
     });
   };
 

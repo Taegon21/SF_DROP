@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"; // 리액트 라우터의 useNav
 import styles from "./UploadButton.module.css";
 
 const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
-  const navigate = useNavigate(); // navigate 함수 사용
+  const navigate = useNavigate(); 
 
   const uploadFiles = async () => {
     const formData = new FormData();
@@ -16,19 +16,16 @@ const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
       formData.append("files", file);
     });
 
-    // FormData에 인증번호 추가
     formData.append("authCode", authCode);
-    // const accessToken = localStorage.getItem("accessToken"); 
 
     try {
       await axios.post("http://localhost:8000/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
-        withCredentials: true, // 쿠키 전송을 위해 withCredentials 설정
+        withCredentials: true, 
       });
       setSelectedFiles([]); // 파일 목록 초기화
-      // 업로드 성공 후, /uploadcomplete로 이동하며 state로 데이터 전달
       navigate("/uploadcomplete", {
         state: { files: selectedFiles, authCode },
       });

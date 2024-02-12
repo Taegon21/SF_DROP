@@ -1,5 +1,4 @@
 .heading {
-  /* 중앙정렬 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +8,6 @@
 
 
 .underline {
-  /* 밑줄 */
   border-bottom: 2px solid black;
   padding: 5px;
   margin: 0 100px 50px;

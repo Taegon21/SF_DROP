@@ -15,7 +15,6 @@ const UploadBundle = () => {
         setGroupedFiles(response.data);
       } catch (error) {
         console.error("Error fetching files", error);
-        // 적절한 에러 처리를 여기에 추가하세요.
       }
     };
 
@@ -24,31 +23,35 @@ const UploadBundle = () => {
 
   return (
     <div className={styles.uploadContainer}>
-      {Object.entries(groupedFiles).map(([authCode, files], index, array) => (
+      {groupedFiles.map((group, index) => (
         <div
-          key={authCode}
+          key={group.auth_code}
           className={`${styles.bundle} ${
-            index === array.length - 1 ? styles.lastBundle : ""
+            index === groupedFiles.length - 1 ? styles.lastBundle : ""
           }`}
         >
           <img src={fileicon} alt="Files Icon" className={styles.fileicon} />
           <div className={styles.fileInfo}>
             <div className={styles.fileList}>
-              {files.map((file, fileIndex) => (
+              {group.files.map((file, fileIndex) => (
                 <React.Fragment key={fileIndex}>
                   <span className={styles.fileName}>{file}</span>
-                  {fileIndex < files.length - 1 ? <span>/&nbsp;</span> : null}
+                  {fileIndex < group.files.length - 1 ? (
+                    <span>/&nbsp;&nbsp;</span>
+                  ) : null}
                 </React.Fragment>
               ))}
             </div>
             <div className={styles.details}>
-              <span className={styles.authCode}>인증번호: {authCode}</span>
+              <span className={styles.authCode}>
+                인증번호: {group.auth_code}
+              </span>
               <div className={styles.time}>
-                <Validtime authCode={authCode} />
+                <Validtime uploadTime={group.upload_time} />
               </div>
               <button
                 className={styles.deleteButton}
-                onClick={() => handleDelete(authCode, setGroupedFiles)}
+                onClick={() => handleDelete(group.auth_code, setGroupedFiles)}
               >
                 삭제
               </button>

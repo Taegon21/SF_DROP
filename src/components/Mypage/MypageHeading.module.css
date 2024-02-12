@@ -9,7 +9,6 @@
 
 
 .underline {
-  /* 밑줄 */
   border-bottom: 2px solid black;
   padding: 5px;
   margin: 0 100px 50px;

@@ -41,7 +41,7 @@ function PickFiles() {
               onChange={fileChangedHandler}
               className={styles.fileInput}
               multiple
-              style={{ display: "none" }} // input 태그 숨기기
+              style={{ display: "none" }} 
             />
             <label htmlFor="fileInput">
               <img

@@ -15,16 +15,16 @@
   width: 50%;
   background-color: #e0e0e0;
   border-radius: 8px;
-  overflow: hidden; /* 이 부분은 바의 둥근 모서리를 유지하기 위해 추가 */
+  overflow: hidden; 
 }
 
 .progressBar {
   height: 24px;
-  background-color: green; /* 기본 색상 */
+  background-color: green; 
   border-radius: 8px;
 }
 
 .progressBar.overLimit {
-  background-color: red; /* 용량 초과 시 색상 */
+  background-color: red; 
 }
 

@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
+  height: 100%; 
 }
 
 .uploadcontainer {
@@ -21,7 +21,6 @@
   justify-content: center;
   align-items: center;
   margin-top: 40px;
-  /* border: 2px dashed #999; */
   height: 80%;
   width: 80%;
 }
@@ -32,7 +31,7 @@
 .fileicon:hover {
   cursor: pointer;
   filter: opacity(60%); 
-  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+  transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out; 
 }
 .text {
   font-size: 15px;
@@ -45,7 +44,7 @@
   border: 2px dashed #ddd;
   border-radius: 8px;
   text-align: left;
-  height: 100%; /* .leftbody의 높이를 부모와 동일하게 설정 */
+  height: 100%; 
   overflow-y: auto;
   max-height: 100%;
 }

@@ -12,7 +12,7 @@ function ProfileBar() {
     if (storedUserId) {
       setUserId(storedUserId);
     }
-  }, []); // 컴포넌트가 마운트될 때 한 번만 실행
+  }, []);
 
   return (
     <div className={styles.container}>

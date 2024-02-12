@@ -8,7 +8,7 @@
   width: 60%;
   text-align: center;
   height: 600px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
 .logo {
@@ -24,18 +24,18 @@
   padding: 20px;
   font-size: 15px;
   margin: 0 100px 30px;
-  outline: none; /* 기본 포커스 테두리 제거 */
+  outline: none; 
   text-align: center;
 }
 .inputplace:focus {
-  border-color: #1E6838; /* 포커스될 때 변경할 테두리 색상 */
+  border-color: #1E6838; 
 }
 input:focus::placeholder{
     color:transparent;
 }
 
 .button {
-  background-color: #585858; /* 녹색 배경 */
+  background-color: #585858; 
   border: none;
   color: white;
   padding: 10px 30px;
@@ -43,7 +43,7 @@ input:focus::placeholder{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  width: 150px;
+  width: 200px;
   margin: 0 auto 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -51,7 +51,6 @@ input:focus::placeholder{
 }
 
 .button:hover {
-  background-color: #45a049; /* 호버 시 더 짙은 녹색으로 변경 */
-  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; /* 부드러운 색상 및 변형 전환 */
-  /* placeholder 내용 삭제해줘 */
+  background-color: #45a049; 
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out; 
 }

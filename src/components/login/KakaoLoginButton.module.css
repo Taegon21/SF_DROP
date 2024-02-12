@@ -1,20 +1,20 @@
 .loginbutton {
   width: 300px;
-  border: none; /* 테두리 제거 */
+  border: none;
   background: transparent; /* 배경 투명 */
-  outline: none; /* 클릭 시 나타나는 아웃라인 제거 */
+  outline: none; 
 }
 
 .kakaoLoginButton {
-  cursor: pointer; /* 버튼 위에 마우스를 올렸을 때 커서를 포인터로 변경 */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 애니메이션 효과를 부드럽게 만듭니다 */
+  cursor: pointer; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .loginbutton:hover {
-  cursor: pointer; /* 마우스 오버 시 포인터 모양으로 변경 */
+  cursor: pointer; 
 }
 
 .kakaoLoginButton:hover {
-  transform: translateY(5px); /* 호버시 버튼이 약간 위로 움직임 */
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); /* 그림자 효과 추가 */
+  transform: translateY(5px); 
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2); 
 }

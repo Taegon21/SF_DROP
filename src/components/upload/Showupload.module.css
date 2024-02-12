@@ -1,7 +1,7 @@
 .allcontainer{
   display: flex;
   flex-direction: column;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
 }
 .container {
   display: flex;
@@ -13,7 +13,7 @@
   width: 60%;
   text-align: center;
   height: 600px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 그림자 효과 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
 }
 
 .logo {
@@ -81,9 +81,8 @@
   cursor: pointer;
   margin: 0 auto;
 }
-/* UploadButton.module.css */
 .button {
-  background-color: #585858; /* 녹색 배경 */
+  background-color: #585858; 
   border: none;
   color: white;
   padding: 10px 30px;
@@ -100,6 +99,6 @@
 }
 
 .button:hover {
-  background-color: #45a049; /* 호버 시 더 짙은 녹색으로 변경 */
-  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; /* 부드러운 색상 및 변형 전환 */
+  background-color: #45a049; 
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
 }
