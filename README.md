@@ -31,4 +31,5 @@ SF Drop
 
 <img width="1427" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/85d54ab7-d550-4537-a0d1-29ce0b88f79b">
 
-<img width="1664" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/cad7bb91-5659-4015-ad02-8c89fcce4a70">
+<img width="1421" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/96fd36a6-93ae-40dc-abb9-fa758222de9f">
+
