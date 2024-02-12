@@ -24,7 +24,8 @@ SF Drop
 <img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/cd6d0043-2f7e-4372-8f96-5b3b99b26ce9">
 
 ### Mypage
-<img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/18f74783-b865-41a3-9b30-8b4daeaf4f10">
+<img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/771a3f45-7e5d-4351-a81e-6c8ec98a992a">
+
 
 ### 인증번호 입력 후 뷰어를 통한 파일 인쇄
 
