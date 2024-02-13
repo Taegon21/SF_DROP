@@ -19,6 +19,14 @@ function Navbar() {
           <p className={styles.name}>Home</p>
         </NavLink>
         <NavLink
+          to="/print"
+          className={({ isActive }) =>
+            isActive ? `${styles.link} ${styles.linkActive}` : styles.link
+          }
+        >
+          <p className={styles.name}>About</p>
+        </NavLink>
+        <NavLink
           to="/upload"
           className={({ isActive }) =>
             isActive ? `${styles.link} ${styles.linkActive}` : styles.link
@@ -33,15 +41,6 @@ function Navbar() {
           }
         >
           <p className={styles.name}>Mypage</p>
-        </NavLink>
-
-        <NavLink
-          to="/print"
-          className={({ isActive }) =>
-            isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-          }
-        >
-          <p className={styles.name}>Print</p>
         </NavLink>
       </nav>
     </div>

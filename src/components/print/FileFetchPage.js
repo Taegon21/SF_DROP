@@ -51,7 +51,7 @@ const FileFetchPage = () => {
                       (window.location.href = `http://localhost:8000/files/${authCode}/${file}`)
                     }
                   >
-                    다운로드
+                    미리보기
                   </button>
                 )}
               </div>

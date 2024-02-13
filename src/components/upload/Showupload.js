@@ -24,8 +24,8 @@ function ShowUpload() {
           ))}
         </ul>
       </div>
-      <button onClick={() => navigate("/home")} className={styles.button}>
-        Home
+      <button onClick={() => navigate("/upload")} className={styles.button}>
+        Upload Complete
       </button>
     </div>
   );
