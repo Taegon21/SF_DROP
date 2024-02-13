@@ -19,7 +19,9 @@ const UploadTimeDiff = (uploadTime) => {
       const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
 
-      setRemainingTime(`${hours}시간 ${minutes}분 ${seconds}초 남음`);
+      // 서버가 9시간 빠르므로(미국 기준) 9시간을 더해준다.
+      setRemainingTime(`${hours+9}시간 ${minutes}분 ${seconds}초 남음`);
+      
     };
 
     calculateRemainingTime();

@@ -17,3 +17,28 @@
   background-color: #45a049; 
   transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out; 
 }
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed; /* 또는 absolute, 화면 전체를 덮기 원한다면 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* 다른 요소들 위에 보이도록 */
+}
+
+.loadingText {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333; /* 로딩 박스의 배경색 */
+  color: #fff; /* 텍스트 색상 */
+  font-weight: bold;
+}

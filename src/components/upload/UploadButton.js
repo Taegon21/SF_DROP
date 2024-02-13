@@ -1,12 +1,15 @@
 import React from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // 리액트 라우터의 useNavigate 훅 임포트
+import { useNavigate } from "react-router-dom";
 import styles from "./UploadButton.module.css";
+import { useState } from "react";
 
 const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+  const [isUploading, setIsUploading] = useState(false);
 
   const uploadFiles = async () => {
+    setIsUploading(true);
     const formData = new FormData();
     const authCode = Math.floor(Math.random() * 1000000)
       .toString()
@@ -35,13 +38,24 @@ const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
       });
     } catch (error) {
       console.error("Error uploading files:", error);
+    } finally {
+      setIsUploading(false);
     }
   };
 
   return (
-    <button className={styles.button} onClick={uploadFiles}>
-      Upload Files
-    </button>
+    <>
+      <button className={styles.button} onClick={uploadFiles}>
+        Upload Files
+      </button>
+      {isUploading && (
+        <div className={styles.loading}>
+          <div className={styles.loadingText}>
+            Uploading files, please wait...
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
