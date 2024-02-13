@@ -1,24 +1,25 @@
 import styles from "./ProfileBar.module.css";
 import profileimg from "../../assets/profileimg.png";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 function ProfileBar() {
-  const [userId, setUserId] = useState("");
+  // const [userId, setUserId] = useState("");
 
-  useEffect(() => {
-    // 로컬 스토리지에서 사용자 ID 불러오기
-    const storedUserId = localStorage.getItem("nickname");
-    if (storedUserId) {
-      setUserId(storedUserId);
-    }
-  }, []);
+  // useEffect(() => {
+  //   // 로컬 스토리지에서 사용자 ID 불러오기
+  //   const storedUserId = localStorage.getItem("nickname");
+  //   if (storedUserId) {
+  //     setUserId(storedUserId);
+  //   }
+  // }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
         <img className={styles.profileimg} src={profileimg} alt="profile" />
-        {userId && <p>{userId} 님</p>}
+        {<p>김태건 님</p>}
+        {/* userID */}
       </div>
       <div className={styles.underline}></div>
       <div className={styles.profileinfo}>

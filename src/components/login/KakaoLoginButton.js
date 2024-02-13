@@ -1,17 +1,17 @@
 import React from "react";
 import kakaobutton from "../../assets/kakaobutton.png";
 import styles from "./KakaoLoginButton.module.css";
+import { useNavigate } from "react-router-dom";
 
 const KakaoLoginButton = () => {
   React.useEffect(() => {
     // SDK 초기화
     window.Kakao.init(process.env.REACT_APP_KAKAO_API_KEY);
   }, []);
+  const navigate = useNavigate(); // useNavigate 훅을 사용합니다.
 
   const handleLogin = () => {
-    window.Kakao.Auth.authorize({
-      redirectUri: `${process.env.REACT_APP_API_BASE_URL}/callback`,
-    });
+    navigate("/upload"); 
   };
 
   return (
