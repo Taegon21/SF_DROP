@@ -21,8 +21,9 @@ const AuthCodeInputPage = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:8000/files?authCode=${tempAuthCode}`
+        `${process.env.REACT_APP_API_BASE_URL}/files?authCode=${tempAuthCode}`
       );
+
       const filteredFiles = response.data.files.filter(
         (file) => !file.endsWith(".json")
       );

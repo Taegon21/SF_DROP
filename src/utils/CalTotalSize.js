@@ -8,7 +8,9 @@ function CalTotalSize() {
   useEffect(() => {
     const fetchTotalSize = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/total_size");
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_BASE_URL}/total_size`
+        );
         setTotalSize(response.data.total_size);
       } catch (error) {
         console.error("Error fetching total size:", error);

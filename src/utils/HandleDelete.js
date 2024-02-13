@@ -5,7 +5,9 @@ export const handleDelete = async (authCode, setGroupedFiles) => {
 
   if (isConfirmed) {
     try {
-      await axios.delete(`http://localhost:8000/delete_files/${authCode}`);
+      await axios.delete(
+        `${process.env.REACT_APP_API_BASE_URL}/delete_files/${authCode}`
+      );
 
       setGroupedFiles((prevFiles) =>
         Object.fromEntries(

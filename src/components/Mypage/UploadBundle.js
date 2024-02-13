@@ -11,7 +11,9 @@ const UploadBundle = () => {
   useEffect(() => {
     const fetchGroupedFiles = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/grouped_files");
+        const response = await axios.get(
+          `${process.env.REACT_APP_API_BASE_URL}/grouped_files`
+        );
         setGroupedFiles(response.data);
       } catch (error) {
         console.error("Error fetching files", error);

@@ -19,12 +19,16 @@ const UploadButton = ({ selectedFiles, setSelectedFiles }) => {
     formData.append("authCode", authCode);
 
     try {
-      await axios.post("http://localhost:8000/upload", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        withCredentials: true, 
-      });
+      await axios.post(
+        `${process.env.REACT_APP_API_BASE_URL}/upload`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          withCredentials: true,
+        }
+      );
       setSelectedFiles([]); // 파일 목록 초기화
       navigate("/uploadcomplete", {
         state: { files: selectedFiles, authCode },

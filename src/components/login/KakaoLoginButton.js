@@ -10,7 +10,7 @@ const KakaoLoginButton = () => {
 
   const handleLogin = () => {
     window.Kakao.Auth.authorize({
-      redirectUri: "http://localhost:3000/callback",
+      redirectUri: `${process.env.REACT_APP_API_BASE_URL}/callback`,
     });
   };
 
