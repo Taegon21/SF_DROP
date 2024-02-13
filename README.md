@@ -1,71 +1,35 @@
-# Getting Started with Create React App
+## 프로젝트명:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SF Drop (Safe & Fast Drop Solution)
 
-## Available Scripts
+## 프로젝트 개요:
+- 한줄 소개: 무인 프린트 카페를 위한 빠르고 안전한 인증번호 기반 파일 전송 솔루션 서비스
+- 프로젝트 기간(Discovery ~ Ideation): 24.01.04 - 24.01.31
+- 프로젝트 기간(Solution + Programming): 24.02.01 - 24.02.12
 
-In the project directory, you can run:
+## 개발환경:
+- Front: React, Styled-components, Recoil
+- Back-end: Flask
+- 협업 툴: Jandi, Notion, Zep
 
-### `npm start`
+ ## 프로젝트 핵심 기능 Demo:
+ ### Mainpage
+ <img width="1919" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/8b8ab03d-f224-4aa7-a9cc-b5822b00c758">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 프린트를 위한 파일 업로드
+<img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/408e3b36-0346-4305-80b1-699c62164cbf">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### 인증번호 발급
+<img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/cd6d0043-2f7e-4372-8f96-5b3b99b26ce9">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Mypage
+<img width="1920" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/771a3f45-7e5d-4351-a81e-6c8ec98a992a">
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 인증번호 입력 후 뷰어를 통한 파일 인쇄
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="1427" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/85d54ab7-d550-4537-a0d1-29ce0b88f79b">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1421" alt="image" src="https://github.com/taegeon-kim-21/SF_DROP/assets/61930500/96fd36a6-93ae-40dc-abb9-fa758222de9f">
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# SF_DROP
